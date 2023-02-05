@@ -1,2 +1,2 @@
-# RestaurantPage
-Build to practice webpack, es6modules and template string
+# RestaurantPage.
+Built to practice webpack, es6modules and template string
