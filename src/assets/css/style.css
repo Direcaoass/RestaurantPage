@@ -1,6 +1,7 @@
 :root {
   --primary-color: rgb(197, 228, 197);
   --primary-color-darker: rgb(177, 208, 177, 0.5);
+  --font-color: rgb(47, 79, 79);
 }
 
 * {
@@ -10,12 +11,20 @@
 }
 
 
+
 .content {
   min-width: 100vw;
-  background-color: var(--primary-color)
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary-color);
+
 }
 
 .header {
+  width: 100vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -23,7 +32,13 @@
   gap: 2rem;
   padding: 2rem;
   background-color: var(--primary-color-darker);
+  color: var(--font-color);
 
+}
+
+.header h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
 }
 
 .menu ul {
@@ -36,33 +51,34 @@
 a {
   cursor: pointer;
   text-decoration: none;
-  color: black;
-  font-size: 2rem;
+  color: var(--font-color);
+  font-size: 1.5rem;
 }
 
 a:hover {
   font-weight: bold;
-  transform: scale(1.2);
 
 }
 
 .mainContent {
-  margin-top: 5rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60vw;
+  width: 100vw;
+  margin: 2rem;
+  text-align: center;
+  flex-direction: column;
   display: flex;
   justify-content: center;
-  background-color: var(--primary-color-darker);
-  ;
-
+  align-items: center;
+  color: var(--font-color);
+  font-size: 1rem;
 }
+
 
 .menuContent {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   gap: 5rem;
   margin: 5rem;
+
 
 }
 
@@ -71,23 +87,35 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 20vw;
-  height: 50vh;
+  width: 25rem;
+  height: 20rem;
   font-size: 1.5rem;
   font-style: italic;
+  color: var(--font-color);
 
 }
 
 .img {
   width: 100%;
   height: 100%;
+  border-radius: 10%;
 
 }
 
+.block:hover{
+  transform: scale(1.1);
+}
+
+
 
 @media (max-width: 800px) {
-  .mainContent {
-    width: 100vw;
+  
+  .mainContent h2{
+  margin:2.5rem;
+      }
+
+  .mainContent{
+    margin-top: 0;
   }
 
   .menuContent {
@@ -95,12 +123,14 @@ a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 
   }
 
   .block {
-    width: 240px;
-    height: 240px;
+    width: 25rem;
+    height: 20rem;
+    font-size: 1rem;
 
 
   }
