@@ -1,7 +1,11 @@
 export default function createMenu() {
-    const menu = `<h2>titulo menu</h2>`
 
-    return menu;
+        let menuBlocks = ''
+    for (let i = 1; i < 9; i++) {
+        menuBlocks += `<div class='block'><img class='img' src="./assets/img/img${i}.jpg" alt="img${i}"><h4>Sandwich ${i}</h4></div>`;
+    }
+    let menuContent = `<div class='menuContent'>${menuBlocks}</div>`;
 
+    return menuContent;
 
 }
